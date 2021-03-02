@@ -7,7 +7,7 @@
 %  Tamang et. al. "Ensemble Riemannian Data Assimilation over the 
 %  Wasserstein Space"
 
-function [U] = entrop_OMT_multiD(x,y,p,q,gamma,niter)
+function [U] = entrop_OMT(x,y,p,q,gamma,niter)
     x = x'; y = y';
     N(1) = size(x,2);
     N(2) = size(y,2);
