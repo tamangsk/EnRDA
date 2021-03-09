@@ -16,8 +16,7 @@ function [U] = entrop_OMT(x,y,p,q,gamma,niter)
     
     K = exp(-C/gamma);
     
-    b = ones(N(2),1);
-    Err_p = []; Err_q = []; 
+    b = ones(N(2),1); 
     for i=1:niter
         a = p ./ (K*b);
         b = q ./ (K'*a);
