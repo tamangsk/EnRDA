@@ -20,9 +20,7 @@ function [U] = entrop_OMT(x,y,p,q,gamma,niter)
     Err_p = []; Err_q = []; 
     for i=1:niter
         a = p ./ (K*b);
-        Err_q(end+1) = norm( b .* (K'*a) - q )/norm(q);
-        b = q ./ (K'*a);    
-        Err_p(end+1) = norm( a .* (K*b) - p )/norm(p);
+        b = q ./ (K'*a);
     end
     U = diag(a)*K*diag(b);
 end
