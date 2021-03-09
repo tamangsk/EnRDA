@@ -9,7 +9,6 @@
 
 
 clear; clc; close all;
-tic
 options = odeset('RelTol',1e-6,'AbsTol',1e-12*ones(3,1));
 
 parm = [10,28,8/3]; 
